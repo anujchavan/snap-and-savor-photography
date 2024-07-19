@@ -15,7 +15,7 @@ const AboutMe = () => {
             <Button className='moreDetails'>Learn More</Button>
           </Col>
           <Col sm={5} className='d-flex align-items-center'>
-            <img src={ProductPhotography3} alt='Image' />
+            <img src={ProductPhotography3} alt='About' />
           </Col>
         </Row>
       </Container>

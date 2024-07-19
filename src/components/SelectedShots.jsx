@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
 import { Fancybox } from "@fancyapps/ui";
 import Food11 from '../images/Food11.jpg'
@@ -41,27 +41,34 @@ const SelectedShots = () => {
     setShuffledImages3(shuffleArray(images3));
   };
 
-  const images1 = [
+  // const images1 = [
+  //   { src: Food11, caption: "Latte Delight" },
+  //   { src: Food12, caption: "Nutty Grain Bowl" },
+  //   { src: Food13, caption: "Berry Waffle Brunch" },
+  //   { src: Food14, caption: "Golden Autumn Soup" }
+  // ];
+
+  const images1 = useMemo(() => [
     { src: Food11, caption: "Latte Delight" },
     { src: Food12, caption: "Nutty Grain Bowl" },
     { src: Food13, caption: "Berry Waffle Brunch" },
     { src: Food14, caption: "Golden Autumn Soup" }
-  ];
+  ], []);
 
-  const images2 = [
+  const images2 = useMemo(() => [
     { src: Food15, caption: "Berry Delight Oatmeal" },
     { src: Food16, caption: "Basket of Bagels" },
     { src: Food17, caption: "Honey-Drizzled Oatmeal" },
     { src: Food18, caption: "Sunrise Parfait" },
     { src: Food19, caption: "Strawberry Sunset" }
-  ];
+  ], []);
 
-  const images3 = [
+  const images3 = useMemo(() => [
     { src: Food20, caption: "Citrus Berry Bliss" },
     { src: Food21, caption: "Kesari Elaichi Muffins" },
     { src: Food22, caption: "Gourmet Cheese Platter" },
     { src: Food23, caption: "Midnight Muse" }
-  ];
+  ], []);
 
   useEffect(() => {
     Fancybox.bind("[data-fancybox='gallery']", {
@@ -77,7 +84,7 @@ const SelectedShots = () => {
     setShuffledImages1(shuffleArray(images1));
     setShuffledImages2(shuffleArray(images2));
     setShuffledImages3(shuffleArray(images3));
-  }, []);
+  }, [images1, images2, images3]);
 
   return (
     <div className='whiteBackground scrollToSection' style={{ padding: '100px 0' }} id='Portfolio'>
