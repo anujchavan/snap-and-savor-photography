@@ -41,13 +41,6 @@ const SelectedShots = () => {
     setShuffledImages3(shuffleArray(images3));
   };
 
-  // const images1 = [
-  //   { src: Food11, caption: "Latte Delight" },
-  //   { src: Food12, caption: "Nutty Grain Bowl" },
-  //   { src: Food13, caption: "Berry Waffle Brunch" },
-  //   { src: Food14, caption: "Golden Autumn Soup" }
-  // ];
-
   const images1 = useMemo(() => [
     { src: Food11, caption: "Latte Delight" },
     { src: Food12, caption: "Nutty Grain Bowl" },
