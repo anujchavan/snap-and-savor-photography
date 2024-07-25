@@ -22,12 +22,12 @@ const AboutMe = () => {
 
       <Container className='py-5'>
         <Row>
-          <Col className='d-flex flex-column justify-content-center'>
+          <Col className='d-flex flex-column justify-content-center me-4'>
             <h2>My Working Process</h2>
             <p className='fw-light mt-2'>Crafting visually captivating images by styling, shooting, and editing food, drink, and product photography.</p>
           </Col>
           <Col>
-            <div className='d-flex'>
+            <div className='d-flex h-50'>
               <h4 className='number'>1</h4>
               <div className='ps-3'>
                 <h4 className='fw-medium m-0'>Concept</h4>
@@ -43,7 +43,7 @@ const AboutMe = () => {
             </div>
           </Col>
           <Col>
-            <div className='d-flex'>
+            <div className='d-flex h-50'>
               <h4 className='number'>2</h4>
               <div className='ps-3'>
                 <h4 className='fw-medium m-0'>Prepare</h4>
